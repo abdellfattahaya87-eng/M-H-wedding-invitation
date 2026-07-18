@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة زفاف</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+    <div id="petals"></div>
+
+<div class="btn">
+🌸 اضغط على أي حد فيهم
+</div>
+
+<img src="groom.png" class="groom">
+
+<img src="bride.png" class="bride">
+
+</div>
+
+<!-- صفحة البوابة -->
+<div id="gatePage" class="hidden">
+
+    <img id="gateImage" src="gateClosed.png" class="gateImage">
+
+</div>
+
+<!-- صفحة الدعوة -->
+
+<div id="invitePage">
+
+    <div class="inviteContent">
+
+        <section class="hero">
+
+           <h1 class="pinyon">You Are Invited</h1>
+
+<h2 class="pinyon">Our Wedding Party</h2>
+
+<img src="divider.png" class="dividerImage">
+
+<h3 class="pinyon names">
+    Mohamed
+    <br>
+    <span>&</span>
+    <br>
+    Heba Tullah
+</h3>
+
+
+           <img src="divider.png" class="dividerImage">
+
+<div class="dateSection reveal">
+
+    <div class="date-layout">
+
+        <div class="side-date">
+            <span>September</span>
+        </div>
+
+        <div class="main-date">
+            <span class="day-name">Saturday</span>
+            <span class="day-number">26</span>
+        </div>
+
+        <div class="side-date">
+            <span>At 08 Pm</span>
+        </div>
+
+    </div>
+
+    <p class="arabic-date amiri">
+        الموافق ١٥ ربيع الآخر ١٤٤٨ هـ
+    </p>
+
+</div>
+
+            </div>
+
+
+           <img src="divider.png" class="dividerImage">
+
+           <p class="endText reveal amiri">
+
+    كُل شَيء فِي مَكانِه الصَحيح هذهِ المرّة
+    <br>
+    حتى قلبي التائِه
+    <br>
+    وَجَد بلادهُ الضائعة وَأخيراً ❤️
+
+</p>
+
+           <div class="venue reveal">
+
+    <p class="pinyon">
+        Venue Name : Love Halls
+        <br>
+        Address : Maadi Corniche El Nile
+        <br>
+        (Next to Silver Nile Club)
+    </p>
+
+</div>
+
+
+            <div class="countdown reveal">
+
+                <div>
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+
+                <div>
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+
+                <div>
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div>
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+
+            </div>
+
+
+<img src="divider.png" class="dividerImage">
+
+<div class="comment reveal pinyon" onclick="openComment()">
+    ❀ &nbsp; Leave a Comment &nbsp; ❀
+</div>
+
+
+           <div class="map reveal">
+
+    <iframe
+    src="https://maps.google.com/maps?q=Maadi%20Corniche%20El%20Nile&output=embed"
+    width="100%"
+    height="350"
+    style="border:0;"
+    loading="lazy">
+    </iframe>
+
+</div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<audio id="music" src="farha.mp3" loop></audio>
+
+<!-- Comment Page -->
+
+<div id="commentPage" class="hidden">
+
+    <div class="commentBox">
+
+        <h1>Leave a Message ❤️</h1>
+
+
+        <div class="question">
+            <h3><span>1.</span> Name</h3>
+            <input type="text" id="guestName">
+        </div>
+
+
+        <div class="question">
+<h3><span>2.</span> Will you attend?</h3>
+            <div class="options">
+                <label>
+                    <input type="radio" name="attend" value="Yes">
+                    Yes
+                </label>
+
+                <label>
+                    <input type="radio" name="attend" value="Absolutely Yes">
+                    Absolutely Yes
+                </label>
+            </div>
+        </div>
+
+
+        <div class="question">
+           <h3><span>3.</span> Share how you know the couple, wish them well or some wisdom for future</h3>
+<p class="arabicQuestion amiri">
+    شاركنا ازاي اتعرفت على العروسين
+    وقول ليهم كلمة حلوة أو حكمة للمستقبل
+</p>
+
+            <textarea id="message"></textarea>
+        </div>
+
+
+        <button onclick="sendComment()">
+            SEND
+        </button>
+
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

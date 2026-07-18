@@ -1,0 +1,480 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow-x:hidden;
+min-height:100%;
+font-family:cursive;
+}
+
+.page{
+    height:100vh;
+    background:url("flowers-bg.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.btn{
+position:absolute;
+top:50px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(255,255,255,.9);
+padding:8px 20px;
+border-radius:30px;
+border:2px solid #e6a4b4;
+font-size:18px;
+color:#b86b82;
+white-space:nowrap;
+z-index:5;
+}
+
+.groom{
+position:absolute;
+bottom:40px;
+left:25px;
+width:180px;
+cursor:pointer;
+z-index:4;
+}
+
+.bride{
+position:absolute;
+bottom:40px;
+right:25px;
+width:220px;
+cursor:pointer;
+z-index:4;
+}
+
+#petals{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.petal{
+position:absolute;
+width:35px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-60px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:.8;
+}
+
+}
+
+.hidden{
+    display:none;
+}
+
+/* صفحة البوابة */
+#gatePage{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    background:#dff5ff;
+}
+
+
+/* صورة البوابة */
+.gateImage{
+
+    width:100%;
+    height:100vh;
+
+    object-fit:contain;
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+/* حركة خفيفة للصورة */
+@keyframes cloudMove{
+
+    from{
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    to{
+        transform:translate(-50%,-50%) scale(1.05);
+    }
+
+}
+
+.zoomGate{
+
+    animation: zoomFast 2s forwards;
+
+}
+
+
+@keyframes zoomFast{
+
+    from{
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+    to{
+
+        transform:translate(-50%,-50%) scale(5);
+
+    }
+
+}
+
+#invitePage{
+    position:relative;
+    min-height:6000px;
+    background:url("border.png") no-repeat top center;
+    background-size:100% auto;
+    background-color:white;
+}
+.inviteContent{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding-top:150px;
+}
+.reveal{
+    opacity:1;
+    transform:none;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+.pinyon{
+    font-family: 'Pinyon Script', cursive;
+    color:#000;
+}
+
+.amiri{
+    font-family:'Amiri', serif;
+    color:#000;
+}
+
+.hearts{
+    color:#ff8fab;
+    font-size:35px;
+    margin:40px 0;
+    letter-spacing:10px;
+}
+
+
+.dateSection,
+.venue{
+    margin-top:40px;
+}
+
+
+.countdown{
+    display:flex;
+    flex-direction:row;
+    direction:ltr;
+    justify-content:center;
+    gap:15px;
+    margin:50px 0;
+}
+
+.countdown div{
+    border:1px solid #000;
+    padding:15px;
+    min-width:70px;
+}
+
+
+.countdown span{
+    display:block;
+    font-size:25px;
+}
+
+
+.countdown small{
+    font-size:14px;
+}
+
+
+.comment{
+    width:340px;
+    margin:50px auto;
+    padding:12px 20px;
+
+    white-space:nowrap;   /* يمنع نزول الكلام لسطر جديد */
+
+    text-align:center;
+
+    font-family:'Pinyon Script', cursive;
+    font-size:30px;
+
+    color:#000;
+
+    border:1.5px solid #d4af37;
+    border-radius:30px;
+
+    background:#fff;
+
+    box-shadow:0 3px 10px rgba(212,175,55,.25);
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.endText{
+    font-family:'Amiri', serif;
+    font-size:24px;
+    line-height:2;
+    text-align:center;
+    width:90%;
+    margin:80px auto 40px;
+    color:#000;
+}
+.map{
+    width:90%;
+    margin:60px auto;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.map iframe{
+    width:100%;
+    height:350px;
+}
+
+.venue{
+    text-align:center;
+    margin:60px auto;
+    color:#000;
+}
+
+.venue p{
+    font-family:'Pinyon Script', cursive;
+    font-size:28px;
+    line-height:1.6;
+}
+
+.time{
+    direction:ltr;
+    unicode-bidi:bidi-override;
+}
+.hearts{
+    width:100%;
+    text-align:center;
+    direction:ltr;
+    font-size:25px;
+    margin:40px 0;
+    color:#e8a0b5;
+}
+
+.dividerImage{
+    width:220px;
+    display:block;
+    margin:-5px auto;
+}
+.inviteContent h1,
+.inviteContent h2,
+.inviteContent h3{
+    margin:0;
+    line-height:1.1;
+}
+
+.inviteContent h3{
+    margin-top:5px;
+    font-size:38px;
+}
+
+.names span{
+    display:inline-block;
+    font-size:35px;
+    margin:5px 0;
+}
+
+#commentPage{
+    min-height:100vh;
+    background:url("flowers-bg.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.commentBox{
+    width:90%;
+    max-width:450px;
+    background:#fff;
+    padding:35px 25px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+
+.commentBox h1{
+    font-family:'Pinyon Script', cursive;
+    font-size:45px;
+    font-weight:normal;
+    margin-bottom:30px;
+}
+
+
+.commentBox label{
+    display:block;
+    text-align:left;
+    margin-top:15px;
+    font-family:'Amiri', serif;
+    font-size:18px;
+}
+
+
+.commentBox input,
+.commentBox textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    border:1px solid #d4af37;
+    border-radius:10px;
+    font-size:16px;
+}
+
+
+.options{
+    text-align:left;
+    margin-top:10px;
+}
+
+
+.options label{
+    display:inline-block;
+    margin-right:15px;
+}
+
+
+.arabicQuestion{
+    font-family:'Amiri', serif;
+    font-size:16px;
+    line-height:1.8;
+}
+
+
+.commentBox textarea{
+    height:120px;
+    resize:none;
+}
+
+
+.commentBox button{
+    margin-top:25px;
+    padding:10px 40px;
+    border:none;
+    border-radius:25px;
+    background:#e8a0b5;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.question{
+    border-bottom:1px solid #d4af37;
+    padding-bottom:20px;
+    margin-bottom:20px;
+}
+
+.question h3{
+    font-family:'Amiri', serif;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.question h3{
+    direction:ltr;
+    text-align:left;
+}
+
+.hidden{
+    display:none;
+}
+
+#commentPage{
+    position: relative;
+    z-index: 10;
+}
+
+#commentPage.hidden{
+    display:none !important;
+}
+
+html, body{
+    overflow-x:hidden;
+}
+
+.date-layout{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    direction:ltr;
+    margin-top:15px;
+}
+
+.side-date{
+    font-family:'Amiri', serif;
+    font-size:18px;
+    color:#000;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+    padding:5px 15px;
+    white-space:nowrap;
+}
+
+.main-date{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#000;
+}
+
+.day-name{
+    font-family:'Amiri', serif;
+    font-size:20px;
+}
+
+.day-number{
+    font-family:'Amiri', serif;
+    font-size:65px;
+    line-height:.9;
+    font-weight:bold;
+}
+
+.arabic-date{
+    font-size:20px;
+    color:#000;
+    margin-top:18px;
+}
