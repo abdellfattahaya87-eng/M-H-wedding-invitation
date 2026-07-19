@@ -71,13 +71,18 @@ setTimeout(function(){
     // دخول صفحة الدعوة بعد انتهاء الزوم
     setTimeout(function(){
 
-        gatePage.classList.add("hidden");
+    // إخفاء البوابة بعد انتهاء الزوم
+    gatePage.classList.add("hidden");
 
-        document.getElementById("invitePage")
-        .classList.remove("hidden");
+    let invite = document.getElementById("invitePage");
 
+    invite.classList.remove("hidden");
 
-    },5000);
+    setTimeout(function(){
+        invite.classList.add("show");
+    },100);
+
+},4500);
 
 
 }
