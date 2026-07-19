@@ -152,7 +152,7 @@ opacity:.8;
 
 #invitePage{
     position:relative;
-    min-height:6000px;
+    min-height:7500px;
     background:url("border.png") no-repeat top center;
     background-size:100% auto;
     background-color:white;
@@ -490,4 +490,4 @@ html, body{
 .fadeItem.show{
     opacity:1;
     transform:translateY(0);
-}
+    }
