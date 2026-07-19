@@ -76,11 +76,9 @@ setTimeout(function(){
 
     let invite = document.getElementById("invitePage");
 
-    invite.classList.remove("hidden");
+invite.classList.remove("hidden");
 
-    setTimeout(function(){
-        invite.classList.add("show");
-    },100);
+showInviteItems();
 
 },4500);
 
@@ -160,4 +158,19 @@ function sendComment(){
     .classList.remove("hidden");
 
 });
+}
+function showInviteItems(){
+
+    const items = document.querySelectorAll(".fadeItem");
+
+    items.forEach((item,index)=>{
+
+        setTimeout(()=>{
+
+            item.classList.add("show");
+
+        }, index * 800);
+
+    });
+
 }
