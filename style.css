@@ -276,9 +276,10 @@ opacity:.8;
 }
 
 .venue p{
-    font-family:'Pinyon Script', cursive;
-    font-size:28px;
-    line-height:1.6;
+    font-family:'Ovo', serif;
+    font-size:22px;
+    line-height:1.7;
+    letter-spacing:0.3px;
 }
 
 .time{
@@ -479,4 +480,14 @@ html, body{
     font-size:20px;
     color:#000;
     margin-top:18px;
+}
+.fadeItem{
+    opacity:0;
+    transform:translateY(25px);
+    transition:all .8s ease;
+}
+
+.fadeItem.show{
+    opacity:1;
+    transform:translateY(0);
 }
