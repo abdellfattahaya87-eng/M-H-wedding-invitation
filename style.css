@@ -127,22 +127,24 @@ opacity:.8;
 
 .zoomGate{
 
-    animation: zoomFast 2s forwards;
+    animation: zoomFade 2s forwards;
 
 }
 
 
-@keyframes zoomFast{
+@keyframes zoomFade{
 
     from{
 
         transform:translate(-50%,-50%) scale(1);
+        opacity:1;
 
     }
 
     to{
 
         transform:translate(-50%,-50%) scale(5);
+        opacity:0;
 
     }
 
